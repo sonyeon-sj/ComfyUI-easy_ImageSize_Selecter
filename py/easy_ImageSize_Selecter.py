@@ -41,14 +41,14 @@ class ImageSizer:
         text1 = str(width)+' x '+str(height)
         #return (int(round(width)), int(round(height)),{"ui": {"text": text, f"SetResolution: {text}"})
         return {
-            "ui": {"text": (text1,f"{str(width)} X {str(height)}")
+            "ui": {"value": [text1]
                 }, 
             "result": (
                 int(round(width)),
                 int(round(height)),
                 ),
         }
-    
+
 NODE_CLASS_MAPPINGS = {
     "ImageSizer": ImageSizer
 }
