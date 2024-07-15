@@ -1,6 +1,12 @@
 import os
 import csv
 
+
+global promptCSV, promptList
+
+PATH = os.getcwd() + '\\custom_nodes\\ComfyUI-easy_ImageSize_Selecter\\doc'
+os.chdir(PATH)
+
 def opencsv(filepath):
     f = open(filepath, 'r',encoding='utf-8')
     reader = csv.reader(f)
@@ -16,7 +22,7 @@ def makePromptList(promptCSV):
     promptList = promptList[1:]
     return promptList
 
-promptCSV = opencsv('./doc/styles.csv')
+promptCSV = opencsv('styles.csv')
 if promptCSV[-1][0] != 'None':
     promptCSV.append(['None','',''])
 else:
@@ -46,7 +52,8 @@ class promptSelecter:
 
     CATEGORY = "Prompt"
     OUTPUT_NODE = True
-    def readPrompt(self, select_preset,promptCSV, promptList):
+    
+    def readPrompt(self, select_preset):
         CSVindex = promptList.index(select_preset)
         posiText = promptCSV[CSVindex+1][1]
         negaText = promptCSV[CSVindex+1][2]
@@ -59,10 +66,10 @@ class promptSelecter:
             }
 
 
-NODE_CLASS_MAPPINGS = {
-    "promptSelecter": promptSelecter
-}
+#NODE_CLASS_MAPPINGS = {
+#    "promptSelecter": promptSelecter
+#}
 
-NODE_DISPLAY_NAME_MAPPINGS = {
-    "promptSelecter": "easy Prompt Selecter"
-}
+#NODE_DISPLAY_NAME_MAPPINGS = {
+#    "promptSelecter": "easy Prompt Selecter"
+#}

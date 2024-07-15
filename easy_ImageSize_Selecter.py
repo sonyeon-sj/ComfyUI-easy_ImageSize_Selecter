@@ -49,10 +49,10 @@ class ImageSizer:
                 ),
         }
 
-NODE_CLASS_MAPPINGS = {
-    "ImageSizer": ImageSizer
-}
+#NODE_CLASS_MAPPINGS = {
+#    "ImageSizer": ImageSizer
+#}
 
-NODE_DISPLAY_NAME_MAPPINGS = {
-    "ImageSizer": "easy ImageSize Selecter"
-}
+#NODE_DISPLAY_NAME_MAPPINGS = {
+#    "ImageSizer": "easy ImageSize Selecter"
+#}
