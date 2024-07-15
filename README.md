@@ -36,5 +36,6 @@ This is a node that enables you to use the Preset prompt that you used in the A1
 ![screenshot1](./images/screenshot05.png)
 ![screenshot1](./images/screenshot06.png)
 ![screenshot1](./images/screenshot07.png)
+
 Overwrite the A1111_webui\styles.csv file that you were using
 to the `custom_nodes\ComfyUI-easy_ImageSize_Selecter\doc` folder and restart comfyui
