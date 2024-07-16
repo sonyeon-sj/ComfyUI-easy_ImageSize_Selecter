@@ -4,8 +4,8 @@ import csv
 
 global promptCSV, promptList
 
-PATH = os.getcwd() + '\\custom_nodes\\ComfyUI-easy_ImageSize_Selecter\\doc'
-os.chdir(PATH)
+# PATH = os.getcwd() + '\\custom_nodes\\ComfyUI-easy_ImageSize_Selecter\\doc'
+# os.chdir(PATH)
 
 def opencsv(filepath):
     f = open(filepath, 'r',encoding='utf-8')
@@ -22,7 +22,7 @@ def makePromptList(promptCSV):
     promptList = promptList[1:]
     return promptList
 
-promptCSV = opencsv('styles.csv')
+promptCSV = opencsv('custom_nodes/ComfyUI-easy_ImageSize_Selecter/doc/styles.csv')
 if promptCSV[-1][0] != 'None':
     promptCSV.append(['None','',''])
 else:
