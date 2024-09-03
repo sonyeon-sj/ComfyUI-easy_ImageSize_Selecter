@@ -15,7 +15,7 @@ You just have to decide whether it's horizontal or vertical
 
 ### How to use it
 
-![screenshot1](./images/screenshot01.png)
+![screenshot1](./images/screenshot01-1.png)
 just select presets (size & direction)
 Then, it will export the width and height as INT.
 
